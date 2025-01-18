@@ -12,4 +12,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
+void console(std::string msg);
+
 #endif

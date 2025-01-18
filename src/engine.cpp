@@ -23,12 +23,18 @@ void Engine::run(){
             if(event.type == sf::Event::Closed){
                 window.close();
             }
-            /*if (event.key.code == sf::Keyboard::K){
-                std::cout << "K" << std::endl;
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) { 
+                console("Left");
             }
-            if (event.key.code == sf::Keyboard::L){
-                std::cout << "L" << std::endl;
-            }*/
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) { 
+                console("Right");
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up)) { 
+                console("Up");
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) { 
+                console("Down");
+            }
         }
 
         display.update();
