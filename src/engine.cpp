@@ -54,6 +54,17 @@ void Engine::runOpenGL(){
 
     bool running = true;
 
+    sf::Font font;
+    bool fontLoaded = font.loadFromFile("../fonts/ball.ttf");
+    sf::Text text;
+    if (fontLoaded){
+        text.setFont(font);
+    }        
+    text.setString("Hello World");
+    text.setCharacterSize(50);
+    text.setFillColor(sf::Color::Red);
+    text.setPosition({100.f,100.f});
+
     while (running){
         sf::Event event;
         while (window.pollEvent(event)){
@@ -67,18 +78,6 @@ void Engine::runOpenGL(){
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        sf::Font font;
-        bool fontLoaded = font.loadFromFile("../fonts/ball.ttf");
-        
-        sf::Text text;
-        if (fontLoaded){
-            text.setFont(font);
-        }        
-        text.setString("Hello");
-        text.setCharacterSize(50);
-        text.setFillColor(sf::Color::Red);
-        text.setPosition({100.f,100.f});
 
         window.clear(sf::Color::Yellow);
         window.pushGLStates();

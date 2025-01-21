@@ -13,8 +13,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
-//#include "../fonts/ball.ttf"
-
 void console(std::string msg);
 
 #endif
