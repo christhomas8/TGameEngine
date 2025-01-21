@@ -8,8 +8,13 @@
 #include <algorithm>
 #include <math.h>
 #include <fstream>
+#include <stdlib.h>
 
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
+
+//#include "../fonts/ball.ttf"
+
+void console(std::string msg);
 
 #endif

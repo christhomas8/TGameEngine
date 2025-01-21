@@ -16,6 +16,7 @@ class Engine {
         ~Engine();
 
         void run();
+        void runOpenGL();
 };
 
 #endif
