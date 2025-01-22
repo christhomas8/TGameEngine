@@ -13,6 +13,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
+const float PI = 3.14159265359;
+
 void console(std::string msg);
 
 #endif

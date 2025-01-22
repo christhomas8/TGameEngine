@@ -63,7 +63,7 @@ void Engine::runOpenGL(){
     text.setString("Hello World");
     text.setCharacterSize(50);
     text.setFillColor(sf::Color::Red);
-    text.setPosition({100.f,100.f});
+    text.setPosition({120.f,100.f});
 
     while (running){
         sf::Event event;
@@ -73,7 +73,7 @@ void Engine::runOpenGL(){
             }
             else if (event.type == sf::Event::Resized) {
                 glViewport(0, 0,event.size.width, event.size.height);
-                console(std::to_string(event.size.width)+ "," +std::to_string(event.size.height));
+                console("Screen size: " + std::to_string(event.size.width)+ "," +std::to_string(event.size.height));
             }            
         }
 
@@ -85,5 +85,6 @@ void Engine::runOpenGL(){
         window.popGLStates();
         
         window.display();
+
     }
 }

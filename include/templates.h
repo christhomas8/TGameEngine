@@ -7,3 +7,5 @@ class Example{
         T var1;
         T var2;    
 };
+
+typedef float Box[3];
