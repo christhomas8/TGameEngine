@@ -1,3 +1,6 @@
+#ifndef TEMPLATES_H
+#define TEMPLATES_H
+
 #include <globals.h>
 
 template <typename T>
@@ -15,3 +18,5 @@ class Shapes {
         void PrintPoints(const Body *shape);
         void PrintPoints(std::vector<std::vector<float>> points);
 };
+
+#endif

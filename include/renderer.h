@@ -1,3 +1,6 @@
+#ifndef RENDERER_H
+#define RENDERER_H
+
 #include "globals.h"
 
 class Renderer {
@@ -8,3 +11,6 @@ class Renderer {
         ~Renderer();
 
 };
+
+
+#endif

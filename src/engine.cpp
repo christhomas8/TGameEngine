@@ -106,7 +106,16 @@ void Engine::runOpenGL(){
             else if (event.type == sf::Event::Resized) {
                 glViewport(0, 0,event.size.width, event.size.height);
                 console("Screen size: " + std::to_string(event.size.width)+ "," +std::to_string(event.size.height));
-            }            
+            }        
+            else if (event.type == sf::Event::JoystickButtonPressed){
+
+            } 
+            else if (event.type == sf::Event::JoystickButtonReleased){
+
+            }   
+            else if (event.type == sf::Event::JoystickMoved){
+                
+            }
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
