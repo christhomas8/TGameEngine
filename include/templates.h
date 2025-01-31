@@ -8,4 +8,10 @@ class Example{
         T var2;    
 };
 
-typedef float Box[3];
+class Shapes {
+    public:
+        Shapes();
+        ~Shapes();
+        void PrintPoints(const Body *shape);
+        void PrintPoints(std::vector<std::vector<float>> points);
+};

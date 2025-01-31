@@ -1,6 +1,7 @@
 #include "../include/engine.h"
 #include "../include/display.h"
 #include "../include/logger.h"
+#include "../include/templates.h"
 
 Engine::Engine() : isRunning(true), rotation(0.f) {}
 Engine::~Engine() {}
@@ -64,6 +65,37 @@ void Engine::runOpenGL(){
     text.setCharacterSize(50);
     text.setFillColor(sf::Color::Red);
     text.setPosition({120.f,100.f});
+
+    Shapes cube;
+    std::vector<std::vector<float>> unitCube = {
+        //{0,0,0},
+        //{1,0,0},
+        //{1,1,0},
+        //{0,1,0},
+        //{0,0,1},
+        //{1,0,1},
+        //{0,1,1},
+        //{1,1,1}
+
+        { 1, -1, -5},
+        { 1, -1, -3},
+        { 1,  1, -5},
+        { 1,  1, -3},
+        {-1, -1, -5},
+        {-1, -1, -3},
+        {-1,  1, -5},
+        {-1,  1, -3}
+    };
+
+    int numberOfPoints = sizeof(unitCube) / sizeof(unitCube[0]);
+    console(std::to_string(numberOfPoints));
+
+    for(int i = 0; i < 8; ++i){
+        float x_proj = unitCube[i][0] / -unitCube[i][2];
+        float y_proj = unitCube[i][1] / -unitCube[i][2];
+        printf("Projected corner %d: x:%f, y:%f\n", i, x_proj, y_proj);
+    }
+    //cube.PrintPoints(unitCube);
 
     while (running){
         sf::Event event;

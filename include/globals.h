@@ -17,4 +17,17 @@ const float PI = 3.14159265359;
 
 void console(std::string msg);
 
+typedef float Body[3];
+
+/*const Body unitCube[8] = {
+    {0,0,0},
+    {1,0,0},
+    {1,1,0},
+    {0,1,0},
+    {0,0,1},
+    {1,0,1},
+    {0,1,1},
+    {1,1,1}
+};*/
+
 #endif
